@@ -22,6 +22,8 @@ home:
     githubRepository: 'IT-Tools GitHub repository'
     twitterX: 'X account'
     twitterXAccount: 'IT Tools X account'
+    bilibili: 'Bilibili'
+    bilibiliAccount: 'IT Tools Bilibili account'
     about: 'About  IT-Tools'
     aboutLabel: 'About'
     darkMode: 'Dark mode'

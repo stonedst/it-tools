@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { IconBrandGithub, IconBrandX, IconInfoCircle, IconMoon, IconSun } from '@tabler/icons-vue';
+import { IconBrandBilibili, IconBrandGithub, IconInfoCircle, IconMoon, IconSun } from '@tabler/icons-vue';
 import { useStyleStore } from '@/stores/style.store';
 
 const styleStore = useStyleStore();
@@ -11,7 +11,7 @@ const { isDarkTheme } = toRefs(styleStore);
     <c-button
       circle
       variant="text"
-      href="https://github.com/CorentinTh/it-tools"
+      href="https://github.com/stonedst/it-tools"
       target="_blank"
       rel="noopener noreferrer"
       :aria-label="$t('home.nav.githubRepository')"
@@ -20,16 +20,16 @@ const { isDarkTheme } = toRefs(styleStore);
     </c-button>
   </c-tooltip>
 
-  <c-tooltip :tooltip="$t('home.nav.twitterX')" position="bottom">
+  <c-tooltip :tooltip="$t('home.nav.bilibili')" position="bottom">
     <c-button
       circle
       variant="text"
-      href="https://x.com/ittoolsdottech"
+      href="https://space.bilibili.com/2100750096"
       rel="noopener"
       target="_blank"
-      :aria-label="$t('home.nav.twitterXAccount')"
+      :aria-label="$t('home.nav.bilibiliAccount')"
     >
-      <n-icon size="25" :component="IconBrandX" />
+      <n-icon size="25" :component="IconBrandBilibili" />
     </c-button>
   </c-tooltip>
 
