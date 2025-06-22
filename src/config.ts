@@ -8,6 +8,7 @@ export const config = figue({
       default: '0.0.0',
       env: 'PACKAGE_VERSION',
     },
+    // 用于记录应用程序的最后一次提交（commit）的 SHA 哈希版本
     lastCommitSha: {
       doc: 'Application last commit SHA version',
       format: 'string',

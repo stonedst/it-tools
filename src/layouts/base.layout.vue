@@ -63,7 +63,7 @@ const tools = computed<ToolCategory[]>(() => [
           <div>
             IT-Tools
 
-            <c-link target="_blank" rel="noopener" :href="`https://github.com/CorentinTh/it-tools/tree/v${version}`">
+            <c-link target="_blank" rel="noopener" href="https://github.com/stonedst/it-tools">
               v{{ version }}
             </c-link>
 
@@ -73,7 +73,7 @@ const tools = computed<ToolCategory[]>(() => [
                 target="_blank"
                 rel="noopener"
                 type="primary"
-                :href="`https://github.com/CorentinTh/it-tools/tree/${commitSha}`"
+                href="https://github.com/stonedst/it-tools"
               >
                 {{ commitSha }}
               </c-link>
@@ -81,8 +81,8 @@ const tools = computed<ToolCategory[]>(() => [
           </div>
           <div>
             © {{ new Date().getFullYear() }}
-            <c-link target="_blank" rel="noopener" href="https://corentin.tech?utm_source=it-tools&utm_medium=footer">
-              Corentin Thomasset
+            <c-link target="_blank" rel="noopener" href="https://sweet-blog-20250042.netlify.app/">
+              Stone
             </c-link>
           </div>
         </div>
