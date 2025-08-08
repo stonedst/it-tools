@@ -337,3 +337,34 @@ tools:
       label-dns-record-type: DNS记录类型
       tag-send-dns-query: 发送DNS查询
       title-query-results: 查询结果
+  watermarker:
+    title: 图片水印工具
+    description: 为一张或多张图片添加水印或Logo
+    texts:
+      label-center: 居中
+      label-top-left: 左上角
+      label-top-right: 右上角
+      label-bottom-left: 左下角
+      label-bottom-right: 右下角
+      title-drag-and-drop-images-here-or-click-to-select-some-files: 拖拽图片到此处，或点击选择文件
+      label-watermark-text: '水印文字：'
+      placeholder-watermark-text: 水印文字
+      label-font-size: '字体大小：'
+      label-opacity: '不透明度：'
+      label-color: '颜色：'
+      label-rotation: '旋转角度(°)：'
+      label-repeat-watermark: '重复水印：'
+      label-position: '位置：'
+      placeholder-watermark-position: 水印位置
+      title-optional-logo: 可选Logo
+      label-logo-width: 'Logo宽度：'
+      title-download-format: 下载格式
+      tag-apply-to-current: 应用到当前
+      tag-download-current: 下载当前
+      tag-apply-download-all: 应用并下载全部
+      tag-upload-logo: 上传Logo
+      tag-png: PNG
+      tag-jpeg: JPEG
+      title-settings: 设置
+      label-tile-spacing: 平铺间距
+      label-margin: 边距

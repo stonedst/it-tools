@@ -438,3 +438,34 @@ tools:
       label-dns-record-type: 'DNS record type:'
       tag-send-dns-query: Send DNS query
       title-query-results: Query results
+  watermarker:
+    title: Watermarker
+    description: Add watermark or logo to one or more images
+    texts:
+      label-center: Center
+      label-top-left: Top Left
+      label-top-right: Top Right
+      label-bottom-left: Bottom Left
+      label-bottom-right: Bottom Right
+      title-drag-and-drop-images-here-or-click-to-select-some-files: Drag and drop images here, or click to select some files
+      label-watermark-text: 'Watermark text:'
+      placeholder-watermark-text: Watermark text
+      label-font-size: 'Font size:'
+      label-opacity: 'Opacity:'
+      label-color: 'Color:'
+      label-rotation: 'Rotation (°):'
+      label-repeat-watermark: 'Repeat Watermark:'
+      label-position: 'Position:'
+      placeholder-watermark-position: Watermark Position
+      title-optional-logo: Optional Logo
+      label-logo-width: 'Logo Width:'
+      title-download-format: Download Format
+      tag-apply-to-current: Apply to Current
+      tag-download-current: Download Current
+      tag-apply-download-all: Apply & Download All
+      tag-upload-logo: Upload Logo
+      tag-png: PNG
+      tag-jpeg: JPEG
+      title-settings: Settings
+      label-tile-spacing: Tile spacing
+      label-margin: Margin
