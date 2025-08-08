@@ -330,3 +330,10 @@ tools:
     description: 将文本转换为其 ASCII 二进制表示形式，反之亦然。
   dns-queries:
     title: DNS查询
+    description: 通过HTTPS执行DNS查询
+    texts:
+      label-name: 名称
+      placeholder-name-to-query: 要查询的名称
+      label-dns-record-type: DNS记录类型
+      tag-send-dns-query: 发送DNS查询
+      title-query-results: 查询结果

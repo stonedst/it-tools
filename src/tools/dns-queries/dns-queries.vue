@@ -6,7 +6,7 @@ import types from './dns.records.types.json';
 const { t } = useI18n();
 
 const type = ref('A');
-const name = ref('google.com');
+const name = ref('baidu.com');
 const answers = ref<string[]>([]);
 
 async function queryDNS() {
