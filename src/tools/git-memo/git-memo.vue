@@ -1,13 +1,31 @@
 <script setup lang="ts">
 import { useThemeVars } from 'naive-ui';
-import Memo from './git-memo.content.md';
+import { useI18n } from 'vue-i18n';
+import { computed, defineAsyncComponent } from 'vue';
 
 const themeVars = useThemeVars();
+const { locale } = useI18n();
+
+const getMemoComponent = (locale: string) => {
+  switch (locale) {
+    case 'zh':
+      return defineAsyncComponent(() => import('./git-memo.content.zh.md'));
+    default:
+      return defineAsyncComponent(() => import('./git-memo.content.md'));
+  }
+};
+
+const Memo = computed(() => getMemoComponent(locale.value));
 </script>
 
 <template>
   <div>
-    <Memo />
+    <Suspense>
+      <component :is="Memo" />
+      <template #fallback>
+        <div>Loading...</div>
+      </template>
+    </Suspense>
   </div>
 </template>
 
