@@ -244,7 +244,7 @@ watchEffect(() => drawImage(selectedIndex.value));
       value-field="value" mt-2 />
 
     <div style="max-width: 100%; max-height: 50vh;overflow:scroll;text-align: center">
-      <canvas ref="canvas" :style="`border:1px solid #ccc;display: ${images.length > 0 ? 'inline-block' : 'none'};`" />
+      <canvas ref="canvas" :style="`border:1px solid #ccc; max-width: 50%;display: ${images.length > 0 ? 'inline-block' : 'none'};`" />
     </div>
 
     <NSpace mt-2 justify="center">
