@@ -469,3 +469,16 @@ tools:
       title-settings: Settings
       label-tile-spacing: Tile spacing
       label-margin: Margin
+  bmi-calculator:
+    title: BMI Calculator
+    description: Body Mass Index Calculator (us or metric units)
+    texts:
+      label-metric-kg-m: Metric (kg, m)
+      label-us-lbs-in: US (lbs, in)
+      title-bmi-calculator: BMI Calculator
+      label-select-units: 'Select Units:'
+      placeholder-enter-weight: Enter weight
+      placeholder-enter-height: Enter height
+      title-result: Result
+      label-bmi: 'BMI:'
+      label-category: 'Category:'

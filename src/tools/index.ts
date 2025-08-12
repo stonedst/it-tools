@@ -1,6 +1,7 @@
 import { tool as base64FileConverter } from './base64-file-converter';
 import { tool as base64StringConverter } from './base64-string-converter';
 import { tool as basicAuthGenerator } from './basic-auth-generator';
+import { tool as bmiCalculator } from './bmi-calculator';
 import { tool as watermarker } from './watermarker';
 import { tool as dnsQueries } from './dns-queries';
 import { tool as emailNormalizer } from './email-normalizer';
@@ -118,6 +119,7 @@ export const toolsByCategory: ToolCategory[] = [
       xmlToJson,
       jsonToXml,
       markdownToHtml,
+      bmiCalculator,
     ],
   },
   {
