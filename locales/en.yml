@@ -483,3 +483,6 @@ tools:
       title-result: Result
       label-bmi: 'BMI:'
       label-category: 'Category:'
+  regex-memo:
+    title: Regex cheatsheet
+    description: Javascript Regex/Regular Expression cheatsheet

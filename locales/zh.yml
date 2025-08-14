@@ -382,3 +382,6 @@ tools:
       title-result: 结果
       label-bmi: 'BMI：'
       label-category: '分类：'
+  regex-memo:
+    title: 正则表达式备忘录
+    description: Javascript 正则表达式备忘录
