@@ -1,13 +1,31 @@
 <script setup lang="ts">
 import { useThemeVars } from 'naive-ui';
-import Memo from './regex-memo.content.md';
+import { useI18n } from 'vue-i18n';
+import { computed, defineAsyncComponent } from 'vue';
 
 const themeVars = useThemeVars();
+const { locale } = useI18n();
+
+function getMemoComponent(locale: string) {
+  switch (locale) {
+    case 'zh':
+      return defineAsyncComponent(() => import('./regex-memo.content.zh.md'));
+    default:
+      return defineAsyncComponent(() => import('./regex-memo.content.md'));
+  }
+};
+
+const Memo = computed(() => getMemoComponent(locale.value));
 </script>
 
 <template>
   <div>
-    <Memo />
+    <Suspense>
+      <component :is="Memo" />
+      <template #fallback>
+        <div>Loading...</div>
+      </template>
+    </Suspense>
   </div>
 </template>
 
@@ -18,15 +36,5 @@ const themeVars = useThemeVars();
   background-color: v-bind('themeVars.cardColor');
   border-radius: 4px;
   overflow: auto;
-}
-::v-deep(table) {
-  border-collapse: collapse;
-}
-::v-deep(table), ::v-deep(td), ::v-deep(th) {
-  border: 1px solid v-bind('themeVars.textColor1');
-  padding: 5px;
-}
-::v-deep(a) {
-  color: v-bind('themeVars.textColor1');
 }
 </style>

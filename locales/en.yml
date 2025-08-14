@@ -92,6 +92,7 @@ tools:
     measurement: Measurement
     text: Text
     data: Data
+    memo: Memo
   password-strength-analyser:
     title: Password strength analyser
     description: >-

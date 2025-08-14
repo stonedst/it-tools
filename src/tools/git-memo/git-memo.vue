@@ -6,7 +6,7 @@ import { computed, defineAsyncComponent } from 'vue';
 const themeVars = useThemeVars();
 const { locale } = useI18n();
 
-const getMemoComponent = (locale: string) => {
+function getMemoComponent(locale: string) {
   switch (locale) {
     case 'zh':
       return defineAsyncComponent(() => import('./git-memo.content.zh.md'));

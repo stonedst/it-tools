@@ -94,7 +94,7 @@ import { tool as yamlViewer } from './yaml-viewer';
 export const toolsByCategory: ToolCategory[] = [
   {
     name: 'Crypto',
-    components: [tokenGenerator, hashText, bcrypt, uuidGenerator, ulidGenerator, cypher, bip39, hmacGenerator, rsaKeyPairGenerator, passwordStrengthAnalyser, pdfSignatureChecker],
+    components: [tokenGenerator, hashText, bcrypt, uuidGenerator, ulidGenerator, cypher, bip39, hmacGenerator, rsaKeyPairGenerator, passwordStrengthAnalyser],
   },
   {
     name: 'Converter',
@@ -155,7 +155,6 @@ export const toolsByCategory: ToolCategory[] = [
   {
     name: 'Development',
     components: [
-      gitMemo,
       randomPortGenerator,
       crontabGenerator,
       jsonViewer,
@@ -168,7 +167,6 @@ export const toolsByCategory: ToolCategory[] = [
       yamlViewer,
       emailNormalizer,
       regexTester,
-      regexMemo,
     ],
   },
   {
@@ -198,6 +196,14 @@ export const toolsByCategory: ToolCategory[] = [
   {
     name: 'Data',
     components: [phoneParserAndFormatter, ibanValidatorAndParser],
+  },
+  {
+    name: 'PDF',
+    components: [pdfSignatureChecker],
+  },
+  {
+    name: 'Memo',
+    components: [gitMemo, regexMemo],
   },
 ];
 
