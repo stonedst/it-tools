@@ -133,6 +133,8 @@ tools:
   http-status-codes:
     title: HTTP 状态码
     description: 所有HTTP状态的列表对其名称和含义解释。
+    searchPlaceholder: 查询HTTP状态码
+    searchResults: 查询结果
   sql-prettify:
     title: SQL 美化和格式化
     description: 在线格式化和美化您的 SQL 查询（它支持各种 SQL 方言）。
@@ -376,12 +378,12 @@ tools:
       label-metric-kg-m: 公制（kg, m）
       label-us-lbs-in: 英制（lbs, in）
       title-bmi-calculator: BMI计算器
-      label-select-units: '选择单位：'
+      label-select-units: 选择单位：
       placeholder-enter-weight: 输入体重
       placeholder-enter-height: 输入身高
       title-result: 结果
-      label-bmi: 'BMI：'
-      label-category: '分类：'
+      label-bmi: BMI：
+      label-category: 分类：
   regex-memo:
     title: 正则表达式备忘录
     description: Javascript 正则表达式备忘录

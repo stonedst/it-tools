@@ -1,12 +1,23 @@
 <script setup lang="ts">
+import { useI18n } from 'vue-i18n';
 import { codesByCategories } from './http-status-codes.constants';
+import { codesByCategoriesZh } from './http-status-codes.constants.zh';
 import { useFuzzySearch } from '@/composable/fuzzySearch';
 
+const { t, locale } = useI18n();
 const search = ref('');
+
+// 根据当前语言选择对应的数据
+const currentCodesByCategories = computed(() => {
+  if (locale.value === 'zh') {
+    return codesByCategoriesZh;
+  }
+  return codesByCategories;
+});
 
 const { searchResult } = useFuzzySearch({
   search,
-  data: codesByCategories.flatMap(({ codes, category }) => codes.map(code => ({ ...code, category }))),
+  data: currentCodesByCategories.value.flatMap(({ codes, category }) => codes.map(code => ({ ...code, category }))),
   options: {
     keys: [{ name: 'code', weight: 3 }, { name: 'name', weight: 2 }, 'description', 'category'],
   },
@@ -14,10 +25,10 @@ const { searchResult } = useFuzzySearch({
 
 const codesByCategoryFiltered = computed(() => {
   if (!search.value) {
-    return codesByCategories;
+    return currentCodesByCategories.value;
   }
 
-  return [{ category: 'Search results', codes: searchResult.value }];
+  return [{ category: t('tools.http-status-codes.searchResults'), codes: searchResult.value }];
 });
 </script>
 
@@ -25,7 +36,7 @@ const codesByCategoryFiltered = computed(() => {
   <div>
     <c-input-text
       v-model:value="search"
-      placeholder="Search http status..."
+      :placeholder="t('tools.http-status-codes.searchPlaceholder')"
       autofocus raw-text mb-10
     />
 
