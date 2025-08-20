@@ -17,7 +17,7 @@ const currentCodesByCategories = computed(() => {
 
 const { searchResult } = useFuzzySearch({
   search,
-  data: currentCodesByCategories.value.flatMap(({ codes, category }) => codes.map(code => ({ ...code, category }))),
+  data: computed(() => currentCodesByCategories.value.flatMap(({ codes, category }) => codes.map(code => ({ ...code, category })))),
   options: {
     keys: [{ name: 'code', weight: 3 }, { name: 'name', weight: 2 }, 'description', 'category'],
   },
